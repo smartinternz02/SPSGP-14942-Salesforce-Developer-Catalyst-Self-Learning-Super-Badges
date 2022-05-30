@@ -1,0 +1,9 @@
+WarehouseSyncShedule.apxc :-
+
+global with sharing class WarehouseSyncSchedule implements Schedulable{
+    global void execute(SchedulableContext ctx){
+        System.enqueueJob(new WarehouseCalloutService());
+    }
+}
+
+//In this challenge on that much code sufficient you have to perform some task on setup to complete the challenge
